@@ -61,7 +61,9 @@ ca_cert = input("Please manually upload the CA certificate via Clavister webgui.
 # Gateway Cert
 gw_cert = input("Please manually upload the gateway certificate + private key via Clavister webgui. And copy/past object name (i.e. GW_cert): ")
 
-print("Let's Go!")
+print("")
+print("Start generating...")
+print("")
 
 # Generate SGS file
 config_file = open("IKEv2-config.sgs", "w")
@@ -79,3 +81,5 @@ config_file.write("cc")
 config_file.write("\n")
 config_file.write("add Interface RoamingVPN "+preset+"_VPN IPPoolAddress="+preset+"_pool AuthSource=Local LocalUserDB="+preset+"_users GatewayCertificate="+gw_cert+" RootCertificates="+ca_cert+" DNS="+preset+"_dns")
 config_file.close()
+
+print("Config file successfully generated. Please import through webgui: Status -> Maintenance -> Import Script. Verify changes and commit changes.")

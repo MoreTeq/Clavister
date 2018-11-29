@@ -14,6 +14,7 @@
 #                                                                                                           #
 # Contact: Roel van den Bussche (roel@moreteq.com)                                                          #
 #############################################################################################################
+
 def validate_ip(ip):
     octet = ip.split('.')
     if len(octet) != 4:

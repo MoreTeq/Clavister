@@ -21,7 +21,6 @@ model = input("Enter model (E10, E20, E80, W20, W30, W40): ")
 myClavister = Clavister(model)
 interfaceFolder = "InterfaceAddresses"
 
-i = 0
 interfaces = []
 for interface in myClavister.interfaces():
     if_setting = []

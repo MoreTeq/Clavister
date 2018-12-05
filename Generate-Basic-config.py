@@ -6,9 +6,7 @@
 # - IP Config for physical ports                                                                            #
 #   - IP address                                                                                            #
 #   - Gateway address (can be empty)                                                                        #
-#   - IP Pool for VPN users                                                                                 #
 #   - Network                                                                                               #
-# - User Database - RADIUS                                                                                  #
 #                                                                                                           #
 # The generated script will edit the default objects for the interfaces.                                    #
 #                                                                                                           #

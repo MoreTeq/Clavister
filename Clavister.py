@@ -18,3 +18,17 @@ class Clavister():
         else:
             interfaces = ()
         return interfaces
+
+class Radius():
+    def __init__(self, name, server, port, key):
+        self.RadiusName = name
+        self.RadiusServer = server
+        self.RadiusPort = port
+        self.RadiusKey = key
+
+    def config_lines(self):
+        cli = []
+        cli.append("add Address IP4Address RadiusServer Address=" + self.RadiusServer)
+        cli.append("add PSK RadiusKey Type=ASCII PSKAscii=" + self.RadiusKey)
+        cli.append("add RadiusServer " + self.RadiusName + " IPAddress=RadiusServer SharedSecret=RadiusKey Port=" + self.RadiusPort)
+        return cli

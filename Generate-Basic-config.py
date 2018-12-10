@@ -77,7 +77,7 @@ for interface in interfaces:
             config_file.write("set Interface Ethernet " + interface_name + " IP=" + interfaceFolder + "/" + interface_name + "_ip DefaultGateway=" + interfaceFolder + "/" + interface_name + "_gw")
             config_file.write("\n")
         else:
-            config_file.write("set Interface Ethernet " + interface_name + " IP=" + interfaceFolder + "/" + interface_name + "_ip")
+            config_file.write("set Interface Ethernet " + interface_name + " IP=" + interfaceFolder + "/" + interface_name + "_ip DefaultGateway=<empty>")
             config_file.write("\n")
 
 config_file.close()

@@ -61,8 +61,6 @@ for interface in interfaces:
         config_file.write("set Interface Ethernet " + interface_name + " DHCPEnabled=Yes")
         config_file.write("\n")
     elif interface_dhcp == False:
-        config_file.write("set Interface Ethernet " + interface_name + " DHCPEnabled=No")
-        config_file.write("\n")
         if interface_ip:
             config_file.write("set Address IP4Address " + interfaceFolder + "/" + interface_name + "_ip Address=" + interface_ip)
             config_file.write("\n")
@@ -71,6 +69,13 @@ for interface in interfaces:
             config_file.write("\n")
         if interface_net:
             config_file.write("set Address IP4Address " + interfaceFolder + "/" + interface_name + "_net Address=" + interface_net)
+            config_file.write("\n")
+
+        if interface_gw:
+            config_file.write("set Interface Ethernet " + interface_name + " DHCPEnabled=No IP=" + interfaceFolder + "/" + interface_name + "_ip DefaultGateway=" + interfaceFolder + "/" + interface_name + "_gw")
+            config_file.write("\n")
+        else:
+            config_file.write("set Interface Ethernet " + interface_name + " DHCPEnabled=No IP=" + interfaceFolder + "/" + interface_name + "_ip")
             config_file.write("\n")
 
 config_file.close()

@@ -15,6 +15,18 @@ class Clavister():
             interfaces = ("G1", "G2", "G3", "G4", "G5", "G6")
         elif self.model == "W40":
             interfaces = ("G1", "G2", "G3", "G4", "G5", "G6", "G7", "G8")
+        elif self.model == "V2":
+            interfaces = ("If1", "If2", "If3")
+        elif self.model == "V3":
+            interfaces = ("If1", "If2", "If3", "If4")
+        elif self.model == "V5":
+            interfaces = ("If1", "If2", "If3", "If4", "If5", "If6")
+        elif self.model == "V7":
+            interfaces = ("If1", "If2", "If3", "If4", "If5", "If6", "If7", "If8")
+        elif self.model == "V9":
+            interfaces = ("If1", "If2", "If3", "If4", "If5", "If6", "If7", "If8", "If9", "If10")
+        elif self.model == "V10":
+            interfaces = ("If1", "If2", "If3", "If4", "If5", "If6", "If7", "If8", "If9", "If10")
         else:
             interfaces = ()
         return interfaces

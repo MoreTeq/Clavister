@@ -1,3 +1,0 @@
-add LocalUserDatabase <LocalUserDatabase name>
-cc LocalUserDatabase <LocalUserDatabase name>
-add User <username> Password=<password>
